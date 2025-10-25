@@ -1,5 +1,9 @@
 # PAI - Personal AI Infrastructure Plugin
 
+> **🔗 This is the Claude Code plugin version of [PAI (Personal AI Infrastructure)](https://github.com/danielmiessler/PAI)**
+>
+> For full documentation, architecture details, and the complete PAI system, visit the [main PAI repository](https://github.com/danielmiessler/PAI).
+
 Transform Claude Code into your Personal AI Infrastructure with skills, agents, and automation workflows.
 
 ## What is PAI?
@@ -173,8 +177,15 @@ MIT License - see LICENSE file
 - Documentation: https://github.com/danielmiessler/PAI
 - Website: https://danielmiessler.com
 
-## Credits
+## About PAI
+
+This plugin is part of the **[Personal AI Infrastructure (PAI)](https://github.com/danielmiessler/PAI)** project.
+
+**PAI** is a comprehensive system for building your own AI-powered workflows and infrastructure. This repository contains the Claude Code plugin version, making PAI's capabilities easily installable for Claude Code users.
+
+**🔗 Learn More:**
+- **Main PAI Repository**: https://github.com/danielmiessler/PAI
+- **Full Documentation**: Complete architecture, setup guides, and philosophy
+- **PAI Website**: https://danielmiessler.com
 
 Created by Daniel Miessler ([@DanielMiessler](https://twitter.com/danielmiessler))
-
-Part of the Personal AI Infrastructure (PAI) project.
