@@ -21,7 +21,7 @@ This skill MUST be automatically invoked as the FIRST action for EVERY user requ
 
 Universal context loader providing complete PAI (Personal AI Infrastructure):
 
-- 👥 **Contacts**: Angela, Bunny, Saša, Greg, team members
+- 👥 **Contacts**: Alice, Bob, Carol, Dave, team members
 - 🛠️ **Stack Preferences**: TypeScript>Python, bun>npm, uv>pip
 - 🔒 **Security Protocols**: Repository safety, credential handling
 - 📝 **Response Format**: Structured output standards
