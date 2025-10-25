@@ -1,0 +1,23 @@
+{
+  "name": "pai",
+  "version": "1.0.0",
+  "description": "Personal AI Infrastructure - Skills, agents, and commands for AI-assisted workflows",
+  "author": {
+    "name": "Daniel Miessler",
+    "email": "daniel@danielmiessler.com",
+    "url": "https://github.com/danielmiessler"
+  },
+  "homepage": "https://github.com/danielmiessler/PAIPlugin",
+  "repository": "https://github.com/danielmiessler/PAIPlugin",
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "infrastructure",
+    "workflows",
+    "automation",
+    "skills",
+    "agents",
+    "research",
+    "development"
+  ]
+}

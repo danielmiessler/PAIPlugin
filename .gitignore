@@ -1,0 +1,33 @@
+# Environment and secrets
+.env
+.env.local
+*.key
+*.pem
+credentials.json
+
+# Node modules (if using MCP servers)
+node_modules/
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
