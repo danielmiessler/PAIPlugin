@@ -6,6 +6,17 @@
 
 Transform Claude Code into your Personal AI Infrastructure with skills, agents, and automation workflows.
 
+## What is Claude Code?
+
+[Claude Code](https://claude.ai/code) is Anthropic's official AI-powered coding assistant CLI. It's like having an expert developer pair with you in your terminal.
+
+This PAI plugin extends Claude Code with specialized skills, agents, and workflows for research, development, security testing, and more.
+
+**New to Claude Code?**
+- **Get Claude Code**: https://claude.ai/code
+- **Documentation**: https://docs.claude.com/en/docs/claude-code
+- **Requirements**: Claude Code v2.0.12+ (plugin system support)
+
 ## What is PAI?
 
 PAI (Personal AI Infrastructure) is a comprehensive Claude Code plugin that provides:
@@ -17,14 +28,24 @@ PAI (Personal AI Infrastructure) is a comprehensive Claude Code plugin that prov
 
 ## Installation
 
-### For Individual Use:
+### Prerequisites
+
+**You must have Claude Code installed first!**
+
+1. **Install Claude Code**: https://claude.ai/code
+2. **Verify version**: Run `claude --version` (need v2.0.12+)
+3. **Start Claude Code**: Run `claude` in your terminal
+
+### Install PAI Plugin
+
+**Option 1: Direct Install (Recommended)**
 
 ```bash
-# Install from GitHub
+# Inside Claude Code, run:
 /plugin install https://github.com/danielmiessler/PAIPlugin
 ```
 
-### For Teams (Auto-Install):
+**Option 2: Team Auto-Install**
 
 Add to `.claude/settings.json` in your project:
 
@@ -38,6 +59,15 @@ Add to `.claude/settings.json` in your project:
   }
 }
 ```
+
+### Quick Start
+
+After installation:
+
+1. **Verify installation**: Type `/help` in Claude Code to see new PAI commands
+2. **Try research**: `/conduct-research latest AI developments`
+3. **Explore agents**: Your session now has access to specialized agents like `perplexity-researcher`, `engineer`, `architect`
+4. **Customize**: Edit `skills/PAI/SKILL.md` with your personal context
 
 ## Features
 
