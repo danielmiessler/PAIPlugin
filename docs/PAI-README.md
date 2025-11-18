@@ -34,114 +34,122 @@
 > - All PAI infrastructure now lives in `.claude/` directory
 > - Repository now properly mirrors your actual `~/.claude/` working system
 > - Fixes major compatibility issues reported by users
+> - Makes repo a true reference implementation
 > - **Action Required:** New installations should copy `.claude/` to `~/.claude/`
 >
-> [See full changelog below →](#-recent-updates)
+> [See full migration guide below →](#-recent-updates)
+
+> [!TIP]
+> **✨ October 19** Now using the session-start hook to load our PAI skill on system load! Great bootloader for the overall Skills system! This is a better version of what we were doing before with UFC but now utilizing the skills system.
+
+> **✨ October 18** Overall just massive updates to the PAI repo. Fixed tons of missing files, hooks, settings, etc. Thank you all for submitting issues and PRs!
+
+> **✨ v0.5.0:** Skills-based PAI architecture with 92.5% token reduction! Core identity now in skill description, zero hook overhead.
+
 
 <details>
-<summary><strong>📅 Click to see all updates</strong></summary>
+<summary><strong>📅 2025-10-20 - Automated Documentation Update</strong></summary>
 
-### Recent Manual Updates
-
-- **✨ Oct 31:** v1.2.0 - Skills-as-Containers Migration - Complete architectural upgrade
-- **✨ Oct 19:** Session-start hook now loads PAI skill - improved Skills system bootstrap
-- **✨ Oct 18:** Major repo cleanup - fixed missing files, hooks, settings
-- **✨ v0.5.0:** Skills-based architecture with 92.5% token reduction
-
-### Automated Documentation Updates
-
-<details>
-<summary>📅 2025-10-20 - Settings: 1 updated</summary>
+- **Settings:** 1 updated
 
 *Updated by pre-commit hook: 1 modified*
+
 </details>
 
+
 <details>
-<summary>📅 2025-10-19 - Voice: 2 updated</summary>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Voice:** 2 updated
 
 *Updated by pre-commit hook: 3 modified*
+
 </details>
 
+
 <details>
-<summary>📅 2025-10-19 - Skills: 1 updated, 5 removed</summary>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Skills:** 1 updated, 5 removed
 
 *Updated by pre-commit hook: 1 modified, 5 deleted*
+
 </details>
 
+
 <details>
-<summary>📅 2025-10-19 - Hooks: 2 new, 1 removed, Settings: 1 updated</summary>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Settings:** 1 updated
+
+*Updated by pre-commit hook: 1 modified*
+
+</details>
+
+
+<details>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Settings:** 1 updated
+
+*Updated by pre-commit hook: 1 modified*
+
+</details>
+
+
+<details>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Settings:** 1 removed
+
+*Updated by pre-commit hook: 1 deleted*
+
+</details>
+
+
+<details>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Hooks:** 2 new, 1 removed
+- **Settings:** 1 updated
 
 *Updated by pre-commit hook: 3 added, 1 modified, 1 deleted*
+
 </details>
 
----
-
-### Version History
 
 <details>
-<summary><strong>📅 v1.2.0 - Skills-as-Containers Migration 🔥 ARCHITECTURAL UPGRADE</strong></summary>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
 
-**The Problem:**
-Commands were scattered in a flat global namespace (`~/.claude/commands/`), making it hard to discover related functionality, maintain consistency, and understand domain boundaries. The architecture needed hierarchical organization that matched how capabilities are naturally grouped.
+- **Skills:** 1 new
 
-**The Solution:**
-Complete migration to Skills-as-Containers pattern:
-- Moved 73 commands into skill-specific `workflows/` subdirectories
-- Enhanced 21 skills with proper workflow organization
-- Established deprecation pattern for future architectural upgrades
-- Documented the complete migration process
-
-**What Changed:**
-```
-Before (v0.6.0):
-~/.claude/
-├── commands/
-│   ├── write-blog.md
-│   ├── publish-blog.md
-│   ├── quick-research.md
-│   ├── extensive-research.md
-│   └── [75+ scattered commands]
-└── skills/
-    ├── blogging/SKILL.md
-    └── research/SKILL.md
-
-After (v1.2.0):
-~/.claude/
-├── commands/               # Empty (commands moved to skills)
-└── skills/
-    ├── blogging/
-    │   ├── SKILL.md
-    │   └── workflows/
-    │       ├── write.md
-    │       └── publish.md
-    └── research/
-        ├── SKILL.md
-        └── workflows/
-            ├── quick.md
-            └── extensive.md
-```
-
-**Architecture Benefits:**
-- ✅ Domain knowledge colocated with workflows
-- ✅ Clear ownership and responsibility
-- ✅ Natural language routing: Skills → Workflows
-- ✅ Easier discovery of related capabilities
-- ✅ Better encapsulation of domain context
-
-**Migration Stats:**
-- 73 commands migrated to skill workflows
-- 21 skills enhanced with workflows/ directories
-- 1 new skill created (content-enhancement)
-- Commands directory reduced from 75 files to 0
-- Zero errors, 100% QA pass rate
-- Complete in ~25 minutes using parallel agents
-
-**Documentation:**
-- See `docs/ARCHITECTURE.md` for Skills-as-Containers pattern
-- Deprecation pattern established in `history/upgrades/deprecated/`
-- Complete migration audit trail preserved
+*Updated by pre-commit hook: 1 added*
 
 </details>
+
+
+<details>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Skills:** 1 new
+
+*Updated by pre-commit hook: 1 added*
+
+</details>
+
+
+<details>
+<summary><strong>📅 2025-10-19 - Automated Documentation Update</strong></summary>
+
+- **Agents:** 3 updated
+- **Commands:** 1 updated
+
+*Updated by pre-commit hook: 5 modified*
+
+</details>
+
+<details>
+<summary><strong>Click to see all updates</strong></summary>
 
 <details>
 <summary><strong>📅 v0.6.0 - Repository Restructure with .claude/ Directory 🔥 MAJOR UPDATE</strong></summary>
@@ -215,11 +223,11 @@ The PAI system is designed to live in `~/.claude/` on your system. By organizing
 - **On-demand context** - Full context loaded only when explicitly needed
 
 **What Changed:**
-- Added YAML frontmatter to `skills/CORE/SKILL.md` with comprehensive system description
+- Added YAML frontmatter to `skills/PAI/SKILL.md` with comprehensive system description
 - Core identity + critical security now in skill description (always present)
 - Removed `MINIMAL.md` entirely (no longer needed)
 - Hook renamed to `update-tab-titles.ts` (only handles tab titles, zero context)
-- Flat file structure in `skills/CORE/` (no `/contexts` subdirectory)
+- Flat file structure in `skills/PAI/` (no `/contexts` subdirectory)
 
 **Architecture:**
 - **Tier 1 (Always On):** Skill description in system prompt (~300 tokens) - identity, critical security, architecture explanation
@@ -233,12 +241,12 @@ The PAI system is designed to live in `~/.claude/` on your system. By organizing
 - Scales efficiently - adding content doesn't multiply token costs
 
 **Files:**
-- `skills/CORE/SKILL.md` - Full context with YAML frontmatter
-- `skills/CORE/contacts.md` - Contact templates
-- `skills/CORE/preferences.md` - Stack preferences templates
-- `skills/CORE/response-format.md` - Response format templates
-- `skills/CORE/security-detailed.md` - Security procedures
-- `skills/CORE/voice-ids.md` - Voice system configuration (optional)
+- `skills/PAI/SKILL.md` - Full context with YAML frontmatter
+- `skills/PAI/contacts.md` - Contact templates
+- `skills/PAI/preferences.md` - Stack preferences templates
+- `skills/PAI/response-format.md` - Response format templates
+- `skills/PAI/security-detailed.md` - Security procedures
+- `skills/PAI/voice-ids.md` - Voice system configuration (optional)
 - `hooks/update-tab-titles.ts` - Tab title updates only
 
 </details>
@@ -329,83 +337,6 @@ Public release with voice server, PAI_HOME support, comprehensive documentation,
 </details>
 
 </details>
-
----
-
-## 🏗️ **Architecture**
-
-**Want to understand how PAI really works?**
-
-PAI is built on four core primitives that work together: **Skills**, **Commands**, **Agents**, and **MCPs**. Understanding this architecture is essential for customizing PAI or building your own AI infrastructure.
-
-### The Four Primitives
-
-- **💡 Skills:** Meta-containers for domain expertise (e.g., Content Creation, Research, Development)
-  - Package workflows, knowledge, and procedural guidance
-  - Use progressive disclosure (metadata → instructions → resources) to prevent context bloat
-  - Auto-load based on natural language triggers
-
-- **⚡ Workflows:** Discrete task workflows within Skills (in `workflows/` subdirectory)
-  - Self-contained, step-by-step workflows
-  - Like "exported functions" from a Skill module
-  - Auto-selected by natural language or invoked explicitly
-
-- **🤖 Agents:** Orchestration workers for parallelization
-  - Primarily invoke Skills/Commands (not standalone knowledge bases)
-  - Enable parallel execution of independent tasks
-  - Best for background work where results are logged
-
-- **🔌 MCPs vs Direct Code:** Implementation flexibility
-  - Use MCPs for standardized platform services (Chrome, Apify, etc.)
-  - Use direct API code for domain-specific integrations
-  - Choose based on your infrastructure scale and needs
-
-### How They Fit Together
-
-```
-User Intent → Natural Language Trigger
-    ↓
-SKILL (Container for Domain)
-    ↓
-WORKFLOW (Specific Task - in workflows/ subdirectory)
-    ↓
-Implementation (Direct Code or MCPs)
-    ↑
-Invoked by AGENTS (for parallelization)
-```
-
-### Real-World Example
-
-```
-User: "Do extensive research on AI agent planning"
-  ↓
-Research Skill (domain expertise) loads
-  ↓
-workflows/extensive-research.md (workflow file) selected
-  ↓
-Launches 24 parallel researcher agents
-  ↓
-Each agent uses research strategies from Skill
-  ↓
-Results consolidated and saved
-```
-
-### Why This Matters
-
-PAI's architecture **perfectly aligns** with Anthropic's official Skills framework while extending it with production-tested patterns:
-- ✅ Progressive disclosure prevents context bloat
-- ✅ Natural language routing (no command memorization)
-- ✅ Parallel agent execution for speed
-- ✅ Modular and composable design
-
-📖 **[Read the full architecture documentation](./docs/ARCHITECTURE.md)** to understand:
-- When to use each primitive
-- Design patterns from production use
-- Comparison with Anthropic's framework
-- Decision trees for architectural choices
-- Best practices and anti-patterns
-
-This architecture scales from simple single-task workflows to complex multi-agent systems while maintaining clarity and efficiency.
 
 ---
 
@@ -594,16 +525,12 @@ graph TD
 
 ```
 ~/.claude/skills/
-├── prompting/
-│   └── workflows/       # create-prompt, optimize-prompt
-├── create-skill/
-│   └── workflows/       # create-new, update-existing
-├── ffuf/
-│   └── workflows/       # directory-scan, parameter-fuzz
-├── research/
-│   └── workflows/       # quick, standard, extensive
-├── fabric/
-│   └── workflows/       # select-pattern (242+ patterns)
+├── prompting/           # Prompt engineering standards
+├── create-skill/        # Skill creation framework
+├── ffuf/                # Web fuzzing for pentesting (by @rez0)
+├── alex-hormozi-pitch/  # $100M Offers pitch framework
+├── research/            # Multi-source research (requires API keys)
+├── fabric/              # Intelligent Fabric pattern selection (242+ patterns)
 ├── web-scraping/        # Web data extraction
 ├── chrome-devtools/     # Browser automation
 ├── youtube-extraction/  # YouTube transcript extraction
@@ -617,9 +544,9 @@ graph TD
 
 **Features:**
 - ✅ Modular capability packages
-- 📄 Progressive disclosure (metadata → workflows/ → assets/)
+- 📄 Progressive disclosure (SKILL.md → CLAUDE.md)
 - ⚡ Intent-based activation
-- 📂 Self-contained with workflows and templates
+- 📂 Self-contained with templates
 - 🔌 Inherits global context
 
 </td>
@@ -641,10 +568,10 @@ graph TD
 
 **Each skill contains:**
 - 📄 Intent triggers ("USE WHEN...")
-- 📁 Workflows subdirectory (specific tasks)
 - 🤖 Specialized agents (if needed)
 - 🔌 MCP integrations (if needed)
-- 📖 Assets and examples
+- ⚡ Commands and tools (if needed)
+- 📖 Documentation and examples
 
 > [!TIP]
 > **You don't manage agents or commands directly.** Just tell PAI what you want to do, and the right skill activates with all necessary resources.
@@ -810,10 +737,10 @@ DA_COLOR="purple"                       # Display color (purple, blue, green, cy
 | 📖 Guide | 🎯 Purpose | ⏱️ Time |
 |----------|------------|---------|
 | [Quick Start](#-quick-start) | Get up and running | 5 min |
-| [Architecture](./docs/ARCHITECTURE.md) | Understand the system | 15 min |
-| [Migration Guide](./docs/MIGRATION.md) | Upgrade to v1.2.0 | 10 min |
+| [Architecture](#-architecture) | Understand the system | 10 min |
 | [SECURITY.md](./SECURITY.md) | Security guidelines | 5 min |
 | [Voice Server](./.claude/voice-server/README.md) | Enable voice interaction | 10 min |
+| [Commands Directory](./.claude/commands/) | Browse all commands | 15 min |
 
 </div>
 
@@ -1153,12 +1080,5 @@ PAI is MIT licensed. See [LICENSE](./LICENSE) for details.
 <a href="#">
   <img src="https://img.shields.io/badge/Back%20to%20Top-8B5CF6?style=for-the-badge&logo=arrow-up&logoColor=white" alt="Back to Top">
 </a>
-
-<br/>
-<br/>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=danielmiessler/PAI&type=date&legend=top-left)](https://www.star-history.com/#danielmiessler/PAI&type=date&legend=top-left)
 
 </div>
